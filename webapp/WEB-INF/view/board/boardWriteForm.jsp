@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<form:form modelAttribute="board" action="/board/insertBoard.action" enctype="multipart/form-data" class="form-horizontal">
+<form:form modelAttribute="board" action="${pageContext.request.contextPath }/board/insertBoard.action" enctype="multipart/form-data" class="form-horizontal">
 		<input type="hidden" name="id" value="testboard">
 		<input type="hidden" name="writer" value="${currentUser.alias }">
 		
@@ -43,7 +43,7 @@
 	
 <!-- naver smart edit -->
 <link href="${pageContext.request.contextPath }/resources/se/css/default.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/${pageContext.request.contextPath }resources/se/js/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/resources/se/js/HuskyEZCreator.js" charset="utf-8"></script>
 <script type="text/javascript">
 	var oEditors = [];
 	nhn.husky.EZCreator.createInIFrame({
